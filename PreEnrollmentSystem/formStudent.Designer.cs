@@ -498,7 +498,7 @@
             // 
             this.buttonLogout2.FlatAppearance.BorderSize = 0;
             this.buttonLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogout2.Location = new System.Drawing.Point(8, 245);
+            this.buttonLogout2.Location = new System.Drawing.Point(16, 228);
             this.buttonLogout2.Name = "buttonLogout2";
             this.buttonLogout2.Size = new System.Drawing.Size(99, 26);
             this.buttonLogout2.TabIndex = 4;
@@ -509,7 +509,7 @@
             // 
             this.buttonProfile.FlatAppearance.BorderSize = 0;
             this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProfile.Location = new System.Drawing.Point(9, 188);
+            this.buttonProfile.Location = new System.Drawing.Point(17, 171);
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.Size = new System.Drawing.Size(102, 25);
             this.buttonProfile.TabIndex = 3;
@@ -521,7 +521,7 @@
             // 
             this.buttonSchedule.FlatAppearance.BorderSize = 0;
             this.buttonSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSchedule.Location = new System.Drawing.Point(9, 149);
+            this.buttonSchedule.Location = new System.Drawing.Point(17, 132);
             this.buttonSchedule.Name = "buttonSchedule";
             this.buttonSchedule.Size = new System.Drawing.Size(102, 33);
             this.buttonSchedule.TabIndex = 2;
@@ -533,7 +533,7 @@
             // 
             this.buttonGrades.FlatAppearance.BorderSize = 0;
             this.buttonGrades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGrades.Location = new System.Drawing.Point(13, 120);
+            this.buttonGrades.Location = new System.Drawing.Point(21, 103);
             this.buttonGrades.Name = "buttonGrades";
             this.buttonGrades.Size = new System.Drawing.Size(94, 23);
             this.buttonGrades.TabIndex = 1;
@@ -545,7 +545,7 @@
             // 
             this.buttonHome.FlatAppearance.BorderSize = 0;
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Location = new System.Drawing.Point(13, 91);
+            this.buttonHome.Location = new System.Drawing.Point(21, 74);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(88, 23);
             this.buttonHome.TabIndex = 0;

@@ -130,7 +130,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.Window;
             this.splitContainer1.Location = new System.Drawing.Point(-1, 106);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -167,7 +167,7 @@
             this.button11.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(9, 182);
+            this.button11.Location = new System.Drawing.Point(8, 168);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(107, 35);
             this.button11.TabIndex = 4;
@@ -180,7 +180,7 @@
             this.button10.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(9, 145);
+            this.button10.Location = new System.Drawing.Point(8, 131);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(107, 35);
             this.button10.TabIndex = 3;
@@ -193,7 +193,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(9, 110);
+            this.button3.Location = new System.Drawing.Point(8, 96);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(107, 35);
             this.button3.TabIndex = 2;
@@ -206,7 +206,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(23, 248);
+            this.button2.Location = new System.Drawing.Point(22, 234);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -219,7 +219,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(23, 81);
+            this.button1.Location = new System.Drawing.Point(22, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -611,10 +611,20 @@
             this.tablePanelSchedule.Controls.Add(this.label137, 0, 17);
             this.tablePanelSchedule.Controls.Add(this.label138, 0, 18);
             this.tablePanelSchedule.Controls.Add(this.label139, 0, 19);
-            this.tablePanelSchedule.Location = new System.Drawing.Point(16, 52);
+            this.tablePanelSchedule.Location = new System.Drawing.Point(24, 52);
             this.tablePanelSchedule.Name = "tablePanelSchedule";
             this.tablePanelSchedule.RowCount = 20;
             this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tablePanelSchedule.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));

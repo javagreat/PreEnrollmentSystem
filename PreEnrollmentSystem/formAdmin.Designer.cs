@@ -727,7 +727,7 @@
             this.button3.Size = new System.Drawing.Size(107, 35);
             this.button3.TabIndex = 2;
             this.button3.TabStop = false;
-            this.button3.Text = "Schedule List";
+            this.button3.Text = "Manage Database";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -792,7 +792,7 @@
             this.button10.Size = new System.Drawing.Size(107, 35);
             this.button10.TabIndex = 3;
             this.button10.TabStop = false;
-            this.button10.Text = "View Class Lists";
+            this.button10.Text = "Manage Accounts";
             this.button10.UseVisualStyleBackColor = false;
             // 
             // splitContainer1
@@ -959,9 +959,10 @@
             this.labelPosition.AutoSize = true;
             this.labelPosition.Location = new System.Drawing.Point(173, 57);
             this.labelPosition.Name = "labelPosition";
-            this.labelPosition.Size = new System.Drawing.Size(141, 13);
+            this.labelPosition.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelPosition.Size = new System.Drawing.Size(116, 13);
             this.labelPosition.TabIndex = 4;
-            this.labelPosition.Text = "Professor - Department Here";
+            this.labelPosition.Text = "Database Administrator";
             // 
             // pictureBox1
             // 
@@ -990,7 +991,7 @@
             this.labelStaffCode.Name = "labelStaffCode";
             this.labelStaffCode.Size = new System.Drawing.Size(159, 18);
             this.labelStaffCode.TabIndex = 2;
-            this.labelStaffCode.Text = "Staff Code: 01-2012-0077";
+            this.labelStaffCode.Text = "Staff Code: 01-2008-0707";
             // 
             // panelHeader
             // 
