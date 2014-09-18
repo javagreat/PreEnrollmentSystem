@@ -467,6 +467,7 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
@@ -554,6 +555,7 @@
             // 
             // panelGrades
             // 
+            this.panelGrades.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelGrades.Controls.Add(this.tableLayoutPanel7);
             this.panelGrades.Controls.Add(this.tableLayoutPanel6);
             this.panelGrades.Controls.Add(this.tableLayoutPanel1);
@@ -570,7 +572,7 @@
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tableLayoutPanel7.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tableLayoutPanel7.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.58264F));
@@ -613,7 +615,7 @@
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tableLayoutPanel6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tableLayoutPanel6.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel6.ColumnCount = 4;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.08319F));
@@ -719,7 +721,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.86325F));
@@ -1156,7 +1158,7 @@
             // panelStudentProfile
             // 
             this.panelStudentProfile.AutoScroll = true;
-            this.panelStudentProfile.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelStudentProfile.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelStudentProfile.Controls.Add(this.label12);
             this.panelStudentProfile.Controls.Add(this.tableLayoutPanel5);
             this.panelStudentProfile.Controls.Add(this.label46);
@@ -1582,6 +1584,7 @@
             // 
             // panelSchedule
             // 
+            this.panelSchedule.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelSchedule.Controls.Add(this.buttonSearchSched);
             this.panelSchedule.Controls.Add(this.labelSearchSched);
             this.panelSchedule.Controls.Add(this.textBoxSearchSched);
@@ -1964,6 +1967,7 @@
             // 
             // panelHome
             // 
+            this.panelHome.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panelHome.Controls.Add(this.linkLabel4);
             this.panelHome.Controls.Add(this.label89);
             this.panelHome.Controls.Add(this.label88);

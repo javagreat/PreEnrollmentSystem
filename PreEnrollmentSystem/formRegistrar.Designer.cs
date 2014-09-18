@@ -320,7 +320,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BackColor = System.Drawing.SystemColors.Window;
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer1.Location = new System.Drawing.Point(0, 97);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -569,7 +569,6 @@
             // textBox26
             // 
             this.textBox26.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox26.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox26.Location = new System.Drawing.Point(38, 410);
