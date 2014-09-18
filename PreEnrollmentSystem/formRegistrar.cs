@@ -15,5 +15,10 @@ namespace PreEnrollmentSystem
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            textBox26.Text = DateTime.Now.ToLongTimeString();
+        }
     }
 }
