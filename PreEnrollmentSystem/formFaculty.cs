@@ -15,5 +15,25 @@ namespace PreEnrollmentSystem
         {
             InitializeComponent();
         }
+
+        private void buttonScheduleList_Click(object sender, EventArgs e)
+        {
+            panelScheduleList.BringToFront();
+        }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            panelHome.BringToFront();
+        }
+
+        private void buttonViewClassList_Click(object sender, EventArgs e)
+        {
+            panelClassListView.BringToFront();
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            panelSettings.BringToFront();
+        }
     }
 }
