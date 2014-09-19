@@ -20,5 +20,25 @@ namespace PreEnrollmentSystem
         {
             textBox26.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            panelHome.BringToFront();
+        }
+
+        private void buttonCreateStudent_Click(object sender, EventArgs e)
+        {
+            //panelCreateStudentAccount.BringToFront();
+        }
+
+        private void buttonFacultyAccount_Click(object sender, EventArgs e)
+        {
+            panelCreateFacultyAcct.BringToFront();
+        }
+
+        private void buttonStudentAssessment_Click(object sender, EventArgs e)
+        {
+            panelStudentAssessment.BringToFront();
+        }
     }
 }

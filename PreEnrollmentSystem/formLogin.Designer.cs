@@ -228,6 +228,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CoursesTableAdapter = null;
             this.tableAdapterManager.ProgramsTableAdapter = null;
+            this.tableAdapterManager.RoomsTableAdapter = null;
             this.tableAdapterManager.StudentsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = PreEnrollmentSystem.EnrollmentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
