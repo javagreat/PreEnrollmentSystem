@@ -85,12 +85,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonManageDatabase = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.buttonSettings = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.buttonManageAccounts = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelScheduleList = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -717,18 +717,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Create Faculty Account";
             // 
-            // button3
+            // buttonManageDatabase
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(8, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 35);
-            this.button3.TabIndex = 2;
-            this.button3.TabStop = false;
-            this.button3.Text = "Manage Database";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonManageDatabase.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonManageDatabase.FlatAppearance.BorderSize = 0;
+            this.buttonManageDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonManageDatabase.Location = new System.Drawing.Point(8, 96);
+            this.buttonManageDatabase.Name = "buttonManageDatabase";
+            this.buttonManageDatabase.Size = new System.Drawing.Size(107, 35);
+            this.buttonManageDatabase.TabIndex = 2;
+            this.buttonManageDatabase.TabStop = false;
+            this.buttonManageDatabase.Text = "Manage Database";
+            this.buttonManageDatabase.UseVisualStyleBackColor = false;
+            this.buttonManageDatabase.Click += new System.EventHandler(this.buttonManageDatabase_Click);
             // 
             // button2
             // 
@@ -743,57 +744,58 @@
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonHome
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(22, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.TabStop = false;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonHome.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonHome.FlatAppearance.BorderSize = 0;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Location = new System.Drawing.Point(22, 67);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(75, 23);
+            this.buttonHome.TabIndex = 0;
+            this.buttonHome.TabStop = false;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
-            // button11
+            // buttonSettings
             // 
-            this.button11.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(8, 168);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(107, 35);
-            this.button11.TabIndex = 4;
-            this.button11.TabStop = false;
-            this.button11.Text = "Settings";
-            this.button11.UseVisualStyleBackColor = false;
+            this.buttonSettings.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonSettings.FlatAppearance.BorderSize = 0;
+            this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSettings.Location = new System.Drawing.Point(8, 168);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Size = new System.Drawing.Size(107, 35);
+            this.buttonSettings.TabIndex = 4;
+            this.buttonSettings.TabStop = false;
+            this.buttonSettings.Text = "Settings";
+            this.buttonSettings.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.buttonSettings);
+            this.panel1.Controls.Add(this.buttonManageAccounts);
+            this.panel1.Controls.Add(this.buttonManageDatabase);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonHome);
             this.panel1.Location = new System.Drawing.Point(4, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(123, 494);
             this.panel1.TabIndex = 0;
             // 
-            // button10
+            // buttonManageAccounts
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(8, 131);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(107, 35);
-            this.button10.TabIndex = 3;
-            this.button10.TabStop = false;
-            this.button10.Text = "Manage Accounts";
-            this.button10.UseVisualStyleBackColor = false;
+            this.buttonManageAccounts.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonManageAccounts.FlatAppearance.BorderSize = 0;
+            this.buttonManageAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonManageAccounts.Location = new System.Drawing.Point(8, 131);
+            this.buttonManageAccounts.Name = "buttonManageAccounts";
+            this.buttonManageAccounts.Size = new System.Drawing.Size(107, 35);
+            this.buttonManageAccounts.TabIndex = 3;
+            this.buttonManageAccounts.TabStop = false;
+            this.buttonManageAccounts.Text = "Manage Accounts";
+            this.buttonManageAccounts.UseVisualStyleBackColor = false;
             // 
             // splitContainer1
             // 
@@ -1108,12 +1110,12 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonManageDatabase;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button buttonManageAccounts;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panelScheduleList;
         private System.Windows.Forms.Label label3;

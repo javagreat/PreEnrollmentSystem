@@ -32,6 +32,13 @@ namespace PreEnrollmentSystem
                        new formStudent().Show();
                        break;
                     case "administrator":
+                       new formAdmin().Show(); 
+                       break;
+                    case "registrar":
+                       new formRegistrar().Show();
+                       break;
+                    case "faculty":
+                       new formFaculty().Show();
                        break;
                 }
 
