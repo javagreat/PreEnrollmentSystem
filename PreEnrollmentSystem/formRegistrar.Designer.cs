@@ -289,10 +289,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panelStudentAssessment);
             this.splitContainer1.Panel2.Controls.Add(this.panelCreateFacultyAcct);
             this.splitContainer1.Panel2.Controls.Add(this.panelHome);
             this.splitContainer1.Panel2.Controls.Add(this.panelSearchResult);
-            this.splitContainer1.Panel2.Controls.Add(this.panelStudentAssessment);
             this.splitContainer1.Size = new System.Drawing.Size(986, 492);
             this.splitContainer1.SplitterDistance = 131;
             this.splitContainer1.TabIndex = 6;
@@ -637,7 +637,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label26.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(5, 9);
             this.label26.Name = "label26";

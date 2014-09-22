@@ -152,7 +152,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.buttonSettings);
             this.panel1.Controls.Add(this.buttonViewClassList);
             this.panel1.Controls.Add(this.buttonScheduleList);
@@ -166,12 +166,14 @@
             // 
             // buttonSettings
             // 
-            this.buttonSettings.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonSettings.FlatAppearance.BorderSize = 0;
+            this.buttonSettings.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonSettings.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonSettings.FlatAppearance.BorderSize = 2;
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSettings.Location = new System.Drawing.Point(8, 168);
+            this.buttonSettings.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSettings.Location = new System.Drawing.Point(8, 200);
             this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Size = new System.Drawing.Size(107, 35);
+            this.buttonSettings.Size = new System.Drawing.Size(112, 26);
             this.buttonSettings.TabIndex = 4;
             this.buttonSettings.TabStop = false;
             this.buttonSettings.Text = "Settings";
@@ -180,12 +182,14 @@
             // 
             // buttonViewClassList
             // 
-            this.buttonViewClassList.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonViewClassList.FlatAppearance.BorderSize = 0;
+            this.buttonViewClassList.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonViewClassList.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonViewClassList.FlatAppearance.BorderSize = 2;
             this.buttonViewClassList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonViewClassList.Location = new System.Drawing.Point(8, 131);
+            this.buttonViewClassList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonViewClassList.Location = new System.Drawing.Point(8, 155);
             this.buttonViewClassList.Name = "buttonViewClassList";
-            this.buttonViewClassList.Size = new System.Drawing.Size(107, 35);
+            this.buttonViewClassList.Size = new System.Drawing.Size(112, 26);
             this.buttonViewClassList.TabIndex = 3;
             this.buttonViewClassList.TabStop = false;
             this.buttonViewClassList.Text = "View Class Lists";
@@ -194,12 +198,14 @@
             // 
             // buttonScheduleList
             // 
-            this.buttonScheduleList.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonScheduleList.FlatAppearance.BorderSize = 0;
+            this.buttonScheduleList.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonScheduleList.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonScheduleList.FlatAppearance.BorderSize = 2;
             this.buttonScheduleList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonScheduleList.Location = new System.Drawing.Point(8, 96);
+            this.buttonScheduleList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonScheduleList.Location = new System.Drawing.Point(8, 108);
             this.buttonScheduleList.Name = "buttonScheduleList";
-            this.buttonScheduleList.Size = new System.Drawing.Size(107, 35);
+            this.buttonScheduleList.Size = new System.Drawing.Size(112, 26);
             this.buttonScheduleList.TabIndex = 2;
             this.buttonScheduleList.TabStop = false;
             this.buttonScheduleList.Text = "Schedule List";
@@ -208,12 +214,14 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(22, 234);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(8, 255);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(112, 26);
             this.button2.TabIndex = 1;
             this.button2.TabStop = false;
             this.button2.Text = "Logout";
@@ -221,12 +229,14 @@
             // 
             // buttonHome
             // 
-            this.buttonHome.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.buttonHome.FlatAppearance.BorderSize = 0;
+            this.buttonHome.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonHome.FlatAppearance.BorderSize = 2;
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Location = new System.Drawing.Point(22, 67);
+            this.buttonHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonHome.Location = new System.Drawing.Point(8, 64);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(75, 23);
+            this.buttonHome.Size = new System.Drawing.Size(112, 26);
             this.buttonHome.TabIndex = 0;
             this.buttonHome.TabStop = false;
             this.buttonHome.Text = "Home";
@@ -976,6 +986,7 @@
             // 
             // panelHeader
             // 
+            this.panelHeader.BackColor = System.Drawing.Color.Yellow;
             this.panelHeader.Controls.Add(this.labelPosition);
             this.panelHeader.Controls.Add(this.pictureBox1);
             this.panelHeader.Controls.Add(this.labelName);
@@ -1008,6 +1019,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.labelName.Location = new System.Drawing.Point(170, 0);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(318, 35);
