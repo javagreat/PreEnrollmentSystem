@@ -142,10 +142,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panelScheduleList);
             this.splitContainer1.Panel2.Controls.Add(this.panelClassListView);
             this.splitContainer1.Panel2.Controls.Add(this.panelSettings);
             this.splitContainer1.Panel2.Controls.Add(this.panelHome);
-            this.splitContainer1.Panel2.Controls.Add(this.panelScheduleList);
             this.splitContainer1.Size = new System.Drawing.Size(991, 496);
             this.splitContainer1.SplitterDistance = 129;
             this.splitContainer1.TabIndex = 9;
