@@ -5434,7 +5434,7 @@ SELECT account_username, student_lastname, student_firstname, student_middlename
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program, student_birthday, student_birthplace, student_citizenship, student_civil, student_religion FROM Students WHERE (account_username = @inputUsername)";
@@ -5446,6 +5446,24 @@ SELECT account_username, student_lastname, student_firstname, student_middlename
                 " FROM Students\r\nWHERE account_username = @inputUsername";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@inputUsername", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "account_username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"INSERT INTO [Students] ([account_username], [student_lastname], [student_firstname], [student_middlename], [student_num], [student_status], [student_gender], [student_program], [student_birthday], [student_birthplace], [student_citizenship], [student_civil], [student_religion]) VALUES (@account_username, @student_lastname, @student_firstname, @student_middlename, @student_num, @student_status, @student_gender, @student_program, @student_birthday, @student_birthplace, @student_citizenship, @student_civil, @student_religion);
+SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program, student_birthday, student_birthplace, student_citizenship, student_civil, student_religion FROM Students WHERE (account_username = @account_username)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@account_username", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "account_username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_lastname", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_firstname", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_firstname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_middlename", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_middlename", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_num", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_status", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_gender", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_program", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_program", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_birthday", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_birthday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_birthplace", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_birthplace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_citizenship", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_citizenship", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_civil", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_civil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@student_religion", global::System.Data.SqlDbType.NVarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "student_religion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6003,6 +6021,107 @@ SELECT account_username, student_lastname, student_firstname, student_middlename
             else {
                 return ((string)(returnValue));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int insertStudent(string account_username, string student_lastname, string student_firstname, string student_middlename, string student_num, string student_status, string student_gender, string student_program, string student_birthday, string student_birthplace, string student_citizenship, string student_civil, string student_religion) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((account_username == null)) {
+                throw new global::System.ArgumentNullException("account_username");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(account_username));
+            }
+            if ((student_lastname == null)) {
+                throw new global::System.ArgumentNullException("student_lastname");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(student_lastname));
+            }
+            if ((student_firstname == null)) {
+                throw new global::System.ArgumentNullException("student_firstname");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(student_firstname));
+            }
+            if ((student_middlename == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(student_middlename));
+            }
+            if ((student_num == null)) {
+                throw new global::System.ArgumentNullException("student_num");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(student_num));
+            }
+            if ((student_status == null)) {
+                throw new global::System.ArgumentNullException("student_status");
+            }
+            else {
+                command.Parameters[5].Value = ((string)(student_status));
+            }
+            if ((student_gender == null)) {
+                throw new global::System.ArgumentNullException("student_gender");
+            }
+            else {
+                command.Parameters[6].Value = ((string)(student_gender));
+            }
+            if ((student_program == null)) {
+                throw new global::System.ArgumentNullException("student_program");
+            }
+            else {
+                command.Parameters[7].Value = ((string)(student_program));
+            }
+            if ((student_birthday == null)) {
+                throw new global::System.ArgumentNullException("student_birthday");
+            }
+            else {
+                command.Parameters[8].Value = ((string)(student_birthday));
+            }
+            if ((student_birthplace == null)) {
+                throw new global::System.ArgumentNullException("student_birthplace");
+            }
+            else {
+                command.Parameters[9].Value = ((string)(student_birthplace));
+            }
+            if ((student_citizenship == null)) {
+                throw new global::System.ArgumentNullException("student_citizenship");
+            }
+            else {
+                command.Parameters[10].Value = ((string)(student_citizenship));
+            }
+            if ((student_civil == null)) {
+                throw new global::System.ArgumentNullException("student_civil");
+            }
+            else {
+                command.Parameters[11].Value = ((string)(student_civil));
+            }
+            if ((student_religion == null)) {
+                throw new global::System.ArgumentNullException("student_religion");
+            }
+            else {
+                command.Parameters[12].Value = ((string)(student_religion));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
