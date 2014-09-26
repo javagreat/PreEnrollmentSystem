@@ -1,6 +1,6 @@
 ﻿namespace PreEnrollmentSystem
 {
-    partial class formLogin
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.enrollmentDataSet = new PreEnrollmentSystem.EnrollmentDataSet();
@@ -233,7 +233,7 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // formLogin
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,7 +243,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "formLogin";
+            this.Name = "FormLogin";
             this.Text = "STI Pre - Enrollment System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.formLogin_Load);

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace PreEnrollmentSystem
 {
-    public partial class formStudent : Form
+    public partial class FormStudent : Form
     {
-        public formStudent()
+        public FormStudent()
         {
             InitializeComponent();
         }
@@ -43,8 +43,6 @@ namespace PreEnrollmentSystem
 
         private void formStudent_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'enrollmentDataSet.Students' table. You can move, or remove it, as needed.
-            this.studentsTableAdapter.Fill(this.enrollmentDataSet.Students);
             comboBox1.Text=("2013-2014");
             comboBox1.Items.Add("2013-2014");
             comboBox1.Items.Add("2014-2015");
@@ -54,5 +52,11 @@ namespace PreEnrollmentSystem
             comboBox2.Items.Add("2nd Term");
         }
 
+        public void loadData(String username)
+        {
+            // TODO: This line of code loads data into the 'enrollmentDataSet.Students' table. You can move, or remove it, as needed.
+            this.studentsTableAdapter.Fill(this.enrollmentDataSet.Students);
+            labelName.Text = this.studentsTableAdapter.getName(username);
+        }
     }
 }

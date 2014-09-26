@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace PreEnrollmentSystem
 {
-    public partial class formRegistrar : Form
+    public partial class FormRegistrar : Form
     {
-        public formRegistrar()
+        public FormRegistrar()
         {
             InitializeComponent();
         }

@@ -4829,12 +4829,24 @@ SELECT account_username, student_lastname, student_firstname, student_middlename
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT account_username, student_lastname, student_firstname, student_middlename," +
                 " student_num, student_status, student_gender, student_program FROM dbo.Students";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        student_num, student_status, student_gender, student_program\r\nFROM " +
+                "         Students\r\nWHERE        (account_username = @inputUsername)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@inputUsername", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "account_username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT CONCAT (student_lastname, \', \', student_firstname, \' \', student_middlename" +
+                ") FROM Students\r\nWHERE account_username = @inputUsername";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@inputUsername", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "account_username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4856,6 +4868,42 @@ SELECT account_username, student_lastname, student_firstname, student_middlename
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual EnrollmentDataSet.StudentsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            EnrollmentDataSet.StudentsDataTable dataTable = new EnrollmentDataSet.StudentsDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillStudentData(EnrollmentDataSet.StudentsDataTable dataTable, string inputUsername) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((inputUsername == null)) {
+                throw new global::System.ArgumentNullException("inputUsername");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(inputUsername));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual EnrollmentDataSet.StudentsDataTable GetStudentData(string inputUsername) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((inputUsername == null)) {
+                throw new global::System.ArgumentNullException("inputUsername");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(inputUsername));
+            }
             EnrollmentDataSet.StudentsDataTable dataTable = new EnrollmentDataSet.StudentsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5175,6 +5223,40 @@ SELECT account_username, student_lastname, student_firstname, student_middlename
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string student_lastname, string student_firstname, string student_middlename, string student_num, string student_status, string student_gender, string student_program, string Original_account_username, string Original_student_lastname, string Original_student_firstname, string Original_student_middlename, string Original_student_num, string Original_student_status, string Original_student_gender, string Original_student_program) {
             return this.Update(Original_account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program, Original_account_username, Original_student_lastname, Original_student_firstname, Original_student_middlename, Original_student_num, Original_student_status, Original_student_gender, Original_student_program);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string getName(string inputUsername) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((inputUsername == null)) {
+                throw new global::System.ArgumentNullException("inputUsername");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(inputUsername));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
         }
     }
     

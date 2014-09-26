@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace PreEnrollmentSystem
 {
-    public partial class formLogin : Form
+    public partial class FormLogin : Form
     {
-        public formLogin()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -29,16 +29,18 @@ namespace PreEnrollmentSystem
                 switch (queryAccountType)
                 {
                     case "student":
-                       new formStudent().Show();
+                       FormStudent fs = new FormStudent();
+                       fs.loadData(inputUsername);
+                       fs.Show();
                        break;
                     case "administrator":
-                       new formAdmin().Show(); 
+                       new FormAdmin().Show(); 
                        break;
                     case "registrar":
-                       new formRegistrar().Show();
+                       new FormRegistrar().Show();
                        break;
                     case "faculty":
-                       new formFaculty().Show();
+                       new FormFaculty().Show();
                        break;
                 }
 
@@ -53,6 +55,16 @@ namespace PreEnrollmentSystem
         {
             // TODO: This line of code loads data into the 'enrollmentDataSet.Accounts' table. You can move, or remove it, as needed.
             this.accountsTableAdapter.Fill(this.enrollmentDataSet.Accounts);
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

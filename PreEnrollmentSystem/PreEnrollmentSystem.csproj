@@ -73,52 +73,52 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EnrollmentDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="formAdmin.cs">
+    <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formAdmin.Designer.cs">
-      <DependentUpon>formAdmin.cs</DependentUpon>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formFaculty.cs">
+    <Compile Include="FormFaculty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formFaculty.Designer.cs">
-      <DependentUpon>formFaculty.cs</DependentUpon>
+    <Compile Include="FormFaculty.Designer.cs">
+      <DependentUpon>FormFaculty.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLogin.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLogin.Designer.cs">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formRegistrar.cs">
+    <Compile Include="FormRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formRegistrar.Designer.cs">
-      <DependentUpon>formRegistrar.cs</DependentUpon>
+    <Compile Include="FormRegistrar.Designer.cs">
+      <DependentUpon>FormRegistrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="formStudent.cs">
+    <Compile Include="FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formStudent.Designer.cs">
-      <DependentUpon>formStudent.cs</DependentUpon>
+    <Compile Include="FormStudent.Designer.cs">
+      <DependentUpon>FormStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formAdmin.resx">
-      <DependentUpon>formAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formFaculty.resx">
-      <DependentUpon>formFaculty.cs</DependentUpon>
+    <EmbeddedResource Include="FormFaculty.resx">
+      <DependentUpon>FormFaculty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLogin.resx">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formRegistrar.resx">
-      <DependentUpon>formRegistrar.cs</DependentUpon>
+    <EmbeddedResource Include="FormRegistrar.resx">
+      <DependentUpon>FormRegistrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formStudent.resx">
-      <DependentUpon>formStudent.cs</DependentUpon>
+    <EmbeddedResource Include="FormStudent.resx">
+      <DependentUpon>FormStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace PreEnrollmentSystem
 {
-    partial class formRegistrar
+    partial class FormRegistrar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRegistrar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistrar));
             this.logoSTI = new System.Windows.Forms.PictureBox();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.textBoxSearchCode = new System.Windows.Forms.TextBox();
