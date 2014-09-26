@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="EnrollmentDataSet" targetNamespace="http://tempuri.org/EnrollmentDataSet.xsd" xmlns:mstns="http://tempuri.org/EnrollmentDataSet.xsd" xmlns="http://tempuri.org/EnrollmentDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="EnrollmentDataSet" targetNamespace="http://tempuri.org/EnrollmentDataSet1.xsd" xmlns:mstns="http://tempuri.org/EnrollmentDataSet1.xsd" xmlns="http://tempuri.org/EnrollmentDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -59,7 +59,7 @@ SELECT username, password, account_type FROM Accounts WHERE (username = @usernam
               <Mapping SourceColumn="account_type" DataSetColumn="account_type" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Accounts" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getAccountType" Modifier="Public" Name="getAccountType" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getAccountType">
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Accounts" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getAccountType" Modifier="Public" Name="getAccountType" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="getAccountType">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT account_type FROM Accounts
@@ -70,7 +70,7 @@ WHERE username = @inputUsername</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Accounts" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getPassword" Modifier="Public" Name="getPassword" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="getPassword">
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Accounts" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="getPassword" Modifier="Public" Name="getPassword" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getPassword">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT password FROM Accounts
@@ -268,112 +268,6 @@ SELECT roomNum, room_capacity, room_type FROM Rooms WHERE (roomNum = @roomNum)</
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudentsTableAdapter" GeneratorDataComponentClassName="StudentsTableAdapter" Name="Students" UserDataComponentName="StudentsTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Students] WHERE (([account_username] = @Original_account_username) AND ([student_lastname] = @Original_student_lastname) AND ([student_firstname] = @Original_student_firstname) AND ((@IsNull_student_middlename = 1 AND [student_middlename] IS NULL) OR ([student_middlename] = @Original_student_middlename)) AND ([student_num] = @Original_student_num) AND ([student_status] = @Original_student_status) AND ([student_gender] = @Original_student_gender) AND ((@IsNull_student_program = 1 AND [student_program] IS NULL) OR ([student_program] = @Original_student_program)))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_middlename" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_program" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Students] ([account_username], [student_lastname], [student_firstname], [student_middlename], [student_num], [student_status], [student_gender], [student_program]) VALUES (@account_username, @student_lastname, @student_firstname, @student_middlename, @student_num, @student_status, @student_gender, @student_program);
-SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program FROM Students WHERE (account_username = @account_username)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program FROM dbo.Students</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Students] SET [account_username] = @account_username, [student_lastname] = @student_lastname, [student_firstname] = @student_firstname, [student_middlename] = @student_middlename, [student_num] = @student_num, [student_status] = @student_status, [student_gender] = @student_gender, [student_program] = @student_program WHERE (([account_username] = @Original_account_username) AND ([student_lastname] = @Original_student_lastname) AND ([student_firstname] = @Original_student_firstname) AND ((@IsNull_student_middlename = 1 AND [student_middlename] IS NULL) OR ([student_middlename] = @Original_student_middlename)) AND ([student_num] = @Original_student_num) AND ([student_status] = @Original_student_status) AND ([student_gender] = @Original_student_gender) AND ((@IsNull_student_program = 1 AND [student_program] IS NULL) OR ([student_program] = @Original_student_program)));
-SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program FROM Students WHERE (account_username = @account_username)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_middlename" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_program" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="account_username" DataSetColumn="account_username" />
-              <Mapping SourceColumn="student_lastname" DataSetColumn="student_lastname" />
-              <Mapping SourceColumn="student_firstname" DataSetColumn="student_firstname" />
-              <Mapping SourceColumn="student_middlename" DataSetColumn="student_middlename" />
-              <Mapping SourceColumn="student_num" DataSetColumn="student_num" />
-              <Mapping SourceColumn="student_status" DataSetColumn="student_status" />
-              <Mapping SourceColumn="student_gender" DataSetColumn="student_gender" />
-              <Mapping SourceColumn="student_program" DataSetColumn="student_program" />
-            </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillStudentData" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetStudentData" GeneratorSourceName="FillStudentData" GetMethodModifier="Public" GetMethodName="GetStudentData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetStudentData" UserSourceName="FillStudentData">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        student_num, student_status, student_gender, student_program
-FROM          Students
-WHERE        (account_username = @inputUsername)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="inputUsername" ColumnName="account_username" DataSourceName="" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@inputUsername" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getName" Modifier="Public" Name="getName" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getName">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT CONCAT (student_lastname, ', ', student_firstname, ' ', student_middlename) FROM Students
-WHERE account_username = @inputUsername</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="inputUsername" ColumnName="account_username" DataSourceName="[C:\USERS\RONALDLOUIE\DESKTOP\RLSADIZ\VISUAL STUDIO GIT\PREENROLLMENTSYSTEM\PREENROLLMENTSYSTEM\ENROLLMENT.MDF].dbo.Students" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@inputUsername" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SectionsTableAdapter" GeneratorDataComponentClassName="SectionsTableAdapter" Name="Sections" UserDataComponentName="SectionsTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Sections" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -426,6 +320,135 @@ SELECT section_code, section_year, section_program FROM Sections WHERE (section_
               <Mapping SourceColumn="section_program" DataSetColumn="section_program" />
             </Mappings>
             <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudentsTableAdapter" GeneratorDataComponentClassName="StudentsTableAdapter" Name="Students" UserDataComponentName="StudentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectName="dbo.Students" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillStudentData" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetStudentData" GeneratorSourceName="FillStudentData" GetMethodModifier="Public" GetMethodName="GetStudentData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetStudentData" UserSourceName="FillStudentData">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Students] WHERE (([account_username] = @Original_account_username) AND ([student_lastname] = @Original_student_lastname) AND ([student_firstname] = @Original_student_firstname) AND ((@IsNull_student_middlename = 1 AND [student_middlename] IS NULL) OR ([student_middlename] = @Original_student_middlename)) AND ([student_num] = @Original_student_num) AND ([student_status] = @Original_student_status) AND ([student_gender] = @Original_student_gender) AND ([student_program] = @Original_student_program) AND ((@IsNull_student_birthday = 1 AND [student_birthday] IS NULL) OR ([student_birthday] = @Original_student_birthday)) AND ((@IsNull_student_birthplace = 1 AND [student_birthplace] IS NULL) OR ([student_birthplace] = @Original_student_birthplace)) AND ((@IsNull_student_citizenship = 1 AND [student_citizenship] IS NULL) OR ([student_citizenship] = @Original_student_citizenship)) AND ((@IsNull_student_civil = 1 AND [student_civil] IS NULL) OR ([student_civil] = @Original_student_civil)) AND ((@IsNull_student_religion = 1 AND [student_religion] IS NULL) OR ([student_religion] = @Original_student_religion)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_middlename" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_birthday" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_birthday" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_birthday" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthday" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_birthplace" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_birthplace" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_birthplace" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthplace" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_citizenship" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_citizenship" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_citizenship" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_citizenship" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_civil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_civil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_civil" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_civil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_religion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_religion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_religion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_religion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Students] ([account_username], [student_lastname], [student_firstname], [student_middlename], [student_num], [student_status], [student_gender], [student_program], [student_birthday], [student_birthplace], [student_citizenship], [student_civil], [student_religion]) VALUES (@account_username, @student_lastname, @student_firstname, @student_middlename, @student_num, @student_status, @student_gender, @student_program, @student_birthday, @student_birthplace, @student_citizenship, @student_civil, @student_religion);
+SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program, student_birthday, student_birthplace, student_citizenship, student_civil, student_religion FROM Students WHERE (account_username = @account_username)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_birthday" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthday" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_birthplace" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthplace" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_citizenship" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_citizenship" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_civil" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_civil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_religion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_religion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program, student_birthday, student_birthplace, student_citizenship, student_civil, student_religion FROM Students WHERE (account_username = @inputUsername)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="inputUsername" ColumnName="account_username" DataSourceName="" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@inputUsername" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Students] SET [account_username] = @account_username, [student_lastname] = @student_lastname, [student_firstname] = @student_firstname, [student_middlename] = @student_middlename, [student_num] = @student_num, [student_status] = @student_status, [student_gender] = @student_gender, [student_program] = @student_program, [student_birthday] = @student_birthday, [student_birthplace] = @student_birthplace, [student_citizenship] = @student_citizenship, [student_civil] = @student_civil, [student_religion] = @student_religion WHERE (([account_username] = @Original_account_username) AND ([student_lastname] = @Original_student_lastname) AND ([student_firstname] = @Original_student_firstname) AND ((@IsNull_student_middlename = 1 AND [student_middlename] IS NULL) OR ([student_middlename] = @Original_student_middlename)) AND ([student_num] = @Original_student_num) AND ([student_status] = @Original_student_status) AND ([student_gender] = @Original_student_gender) AND ([student_program] = @Original_student_program) AND ((@IsNull_student_birthday = 1 AND [student_birthday] IS NULL) OR ([student_birthday] = @Original_student_birthday)) AND ((@IsNull_student_birthplace = 1 AND [student_birthplace] IS NULL) OR ([student_birthplace] = @Original_student_birthplace)) AND ((@IsNull_student_citizenship = 1 AND [student_citizenship] IS NULL) OR ([student_citizenship] = @Original_student_citizenship)) AND ((@IsNull_student_civil = 1 AND [student_civil] IS NULL) OR ([student_civil] = @Original_student_civil)) AND ((@IsNull_student_religion = 1 AND [student_religion] IS NULL) OR ([student_religion] = @Original_student_religion)));
+SELECT account_username, student_lastname, student_firstname, student_middlename, student_num, student_status, student_gender, student_program, student_birthday, student_birthplace, student_citizenship, student_civil, student_religion FROM Students WHERE (account_username = @account_username)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_birthday" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthday" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_birthplace" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthplace" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_citizenship" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_citizenship" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_civil" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_civil" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@student_religion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_religion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_account_username" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_lastname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_lastname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_firstname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_firstname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_middlename" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_middlename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_middlename" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_num" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_num" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_gender" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_gender" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_program" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_birthday" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_birthday" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_birthday" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthday" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_birthplace" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_birthplace" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_birthplace" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_birthplace" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_citizenship" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_citizenship" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_citizenship" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_citizenship" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_civil" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_civil" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_civil" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_civil" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_student_religion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="student_religion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_student_religion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="student_religion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="account_username" DataSetColumn="account_username" />
+              <Mapping SourceColumn="student_lastname" DataSetColumn="student_lastname" />
+              <Mapping SourceColumn="student_firstname" DataSetColumn="student_firstname" />
+              <Mapping SourceColumn="student_middlename" DataSetColumn="student_middlename" />
+              <Mapping SourceColumn="student_num" DataSetColumn="student_num" />
+              <Mapping SourceColumn="student_status" DataSetColumn="student_status" />
+              <Mapping SourceColumn="student_gender" DataSetColumn="student_gender" />
+              <Mapping SourceColumn="student_program" DataSetColumn="student_program" />
+              <Mapping SourceColumn="student_birthday" DataSetColumn="student_birthday" />
+              <Mapping SourceColumn="student_birthplace" DataSetColumn="student_birthplace" />
+              <Mapping SourceColumn="student_citizenship" DataSetColumn="student_citizenship" />
+              <Mapping SourceColumn="student_civil" DataSetColumn="student_civil" />
+              <Mapping SourceColumn="student_religion" DataSetColumn="student_religion" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="StudentConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getName" Modifier="Public" Name="getName" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT CONCAT(student_lastname, ', ', student_firstname, ' ', student_middlename) FROM Students
+WHERE account_username = @inputUsername</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="inputUsername" ColumnName="account_username" DataSourceName="[C:\USERS\RONALDLOUIE\DESKTOP\RLSADIZ\VISUAL STUDIO GIT\PREENROLLMENTSYSTEM\PREENROLLMENTSYSTEM\ENROLLMENT.MDF].dbo.Students" DataTypeServer="nvarchar(20)" DbType="String" Direction="Input" ParameterName="@inputUsername" Precision="0" ProviderType="NVarChar" Scale="0" Size="20" SourceColumn="account_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -547,6 +570,27 @@ SELECT section_code, section_year, section_program FROM Sections WHERE (section_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Sections" msprop:Generator_TableClassName="SectionsDataTable" msprop:Generator_TableVarName="tableSections" msprop:Generator_RowChangedName="SectionsRowChanged" msprop:Generator_TablePropName="Sections" msprop:Generator_RowDeletingName="SectionsRowDeleting" msprop:Generator_RowChangingName="SectionsRowChanging" msprop:Generator_RowEvHandlerName="SectionsRowChangeEventHandler" msprop:Generator_RowDeletedName="SectionsRowDeleted" msprop:Generator_RowClassName="SectionsRow" msprop:Generator_UserTableName="Sections" msprop:Generator_RowEvArgName="SectionsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="section_code" msprop:Generator_ColumnVarNameInTable="columnsection_code" msprop:Generator_ColumnPropNameInRow="section_code" msprop:Generator_ColumnPropNameInTable="section_codeColumn" msprop:Generator_UserColumnName="section_code">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="section_year" msprop:Generator_ColumnVarNameInTable="columnsection_year" msprop:Generator_ColumnPropNameInRow="section_year" msprop:Generator_ColumnPropNameInTable="section_yearColumn" msprop:Generator_UserColumnName="section_year" type="xs:int" />
+              <xs:element name="section_program" msprop:Generator_ColumnVarNameInTable="columnsection_program" msprop:Generator_ColumnPropNameInRow="section_program" msprop:Generator_ColumnPropNameInTable="section_programColumn" msprop:Generator_UserColumnName="section_program">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="Students" msprop:Generator_TableClassName="StudentsDataTable" msprop:Generator_TableVarName="tableStudents" msprop:Generator_RowChangedName="StudentsRowChanged" msprop:Generator_TablePropName="Students" msprop:Generator_RowDeletingName="StudentsRowDeleting" msprop:Generator_RowChangingName="StudentsRowChanging" msprop:Generator_RowEvHandlerName="StudentsRowChangeEventHandler" msprop:Generator_RowDeletedName="StudentsRowDeleted" msprop:Generator_RowClassName="StudentsRow" msprop:Generator_UserTableName="Students" msprop:Generator_RowEvArgName="StudentsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
@@ -599,31 +643,45 @@ SELECT section_code, section_year, section_program FROM Sections WHERE (section_
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="student_program" msprop:Generator_ColumnVarNameInTable="columnstudent_program" msprop:Generator_ColumnPropNameInRow="student_program" msprop:Generator_ColumnPropNameInTable="student_programColumn" msprop:Generator_UserColumnName="student_program" minOccurs="0">
+              <xs:element name="student_program" msprop:Generator_ColumnVarNameInTable="columnstudent_program" msprop:Generator_ColumnPropNameInRow="student_program" msprop:Generator_ColumnPropNameInTable="student_programColumn" msprop:Generator_UserColumnName="student_program">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="Sections" msprop:Generator_TableClassName="SectionsDataTable" msprop:Generator_TableVarName="tableSections" msprop:Generator_RowChangedName="SectionsRowChanged" msprop:Generator_TablePropName="Sections" msprop:Generator_RowDeletingName="SectionsRowDeleting" msprop:Generator_RowChangingName="SectionsRowChanging" msprop:Generator_RowEvHandlerName="SectionsRowChangeEventHandler" msprop:Generator_RowDeletedName="SectionsRowDeleted" msprop:Generator_RowClassName="SectionsRow" msprop:Generator_UserTableName="Sections" msprop:Generator_RowEvArgName="SectionsRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="section_code" msprop:Generator_ColumnVarNameInTable="columnsection_code" msprop:Generator_ColumnPropNameInRow="section_code" msprop:Generator_ColumnPropNameInTable="section_codeColumn" msprop:Generator_UserColumnName="section_code">
+              <xs:element name="student_birthday" msprop:Generator_ColumnVarNameInTable="columnstudent_birthday" msprop:Generator_ColumnPropNameInRow="student_birthday" msprop:Generator_ColumnPropNameInTable="student_birthdayColumn" msprop:Generator_UserColumnName="student_birthday" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="section_year" msprop:Generator_ColumnVarNameInTable="columnsection_year" msprop:Generator_ColumnPropNameInRow="section_year" msprop:Generator_ColumnPropNameInTable="section_yearColumn" msprop:Generator_UserColumnName="section_year" type="xs:int" />
-              <xs:element name="section_program" msprop:Generator_ColumnVarNameInTable="columnsection_program" msprop:Generator_ColumnPropNameInRow="section_program" msprop:Generator_ColumnPropNameInTable="section_programColumn" msprop:Generator_UserColumnName="section_program">
+              <xs:element name="student_birthplace" msprop:Generator_ColumnVarNameInTable="columnstudent_birthplace" msprop:Generator_ColumnPropNameInRow="student_birthplace" msprop:Generator_ColumnPropNameInTable="student_birthplaceColumn" msprop:Generator_UserColumnName="student_birthplace" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="student_citizenship" msprop:Generator_ColumnVarNameInTable="columnstudent_citizenship" msprop:Generator_ColumnPropNameInRow="student_citizenship" msprop:Generator_ColumnPropNameInTable="student_citizenshipColumn" msprop:Generator_UserColumnName="student_citizenship" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="student_civil" msprop:Generator_ColumnVarNameInTable="columnstudent_civil" msprop:Generator_ColumnPropNameInRow="student_civil" msprop:Generator_ColumnPropNameInTable="student_civilColumn" msprop:Generator_UserColumnName="student_civil" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="student_religion" msprop:Generator_ColumnVarNameInTable="columnstudent_religion" msprop:Generator_ColumnPropNameInRow="student_religion" msprop:Generator_ColumnPropNameInTable="student_religionColumn" msprop:Generator_UserColumnName="student_religion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -648,13 +706,13 @@ SELECT section_code, section_year, section_program FROM Sections WHERE (section_
       <xs:selector xpath=".//mstns:Rooms" />
       <xs:field xpath="mstns:roomNum" />
     </xs:unique>
-    <xs:unique name="Students_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Students" />
-      <xs:field xpath="mstns:account_username" />
-    </xs:unique>
     <xs:unique name="Sections_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Sections" />
       <xs:field xpath="mstns:section_code" />
+    </xs:unique>
+    <xs:unique name="Students_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Students" />
+      <xs:field xpath="mstns:account_username" />
     </xs:unique>
   </xs:element>
 </xs:schema>

@@ -28,17 +28,26 @@ namespace PreEnrollmentSystem
 
         private void buttonCreateStudent_Click(object sender, EventArgs e)
         {
-            //panelCreateStudentAccount.BringToFront();
+            panelCreateStudentAccount.BringToFront();
         }
 
         private void buttonFacultyAccount_Click(object sender, EventArgs e)
         {
-            panelCreateFacultyAcct.BringToFront();
+            panelCreateFacultyAccount.BringToFront();
         }
 
         private void buttonStudentAssessment_Click(object sender, EventArgs e)
         {
             panelStudentAssessment.BringToFront();
+        }
+
+        private void buttonCreateAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRegistrar_Load(object sender, EventArgs e)
+        {
         }
     }
 }
